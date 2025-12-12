@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Box Model</title>
+</head>
+<body style="background:#1f2b3a; font-family:Arial; text-align:center;">
+
+<h1 style="color:white; margin-top:40px;">CSS Box Model</h1>
+
+<!-- MARGIN -->
+<div style="
+    background:#f57f4f;
+    padding:40px;
+    width:450px;
+    margin:30px auto;
+    position:relative;
+">
+
+    <span style="
+        position:absolute;
+        top:20px;
+        left:50%;
+        transform:translateX(-50%);
+        color:white;
+        font-size:20px;
+    ">Margin</span>
+
+    <!-- BORDER -->
+    <div style="
+        background:#4ca3c7;
+        padding:40px;
+        position:relative;
+    ">
+        <span style="
+            position:absolute;
+            top:20px;
+            left:50%;
+            transform:translateX(-50%);
+            color:white;
+            font-size:20px;
+        ">Border</span>
+
+        <!-- PADDING -->
+        <div style="
+            background:#f6d56a;
+            padding:40px;
+            position:relative;
+        ">
+            <span style="
+                position:absolute;
+                top:20px;
+                left:50%;
+                transform:translateX(-50%);
+                color:white;
+                font-size:20px;
+            ">Padding</span>
+
+            <!-- CONTENT -->
+            <div style="
+                background:#6ec8b6;
+                padding:60px;
+                text-align:center;
+                color:white;
+                font-size:24px;
+            ">
+                Content
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
