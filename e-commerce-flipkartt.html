@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flipkart Clone</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background:#f1f3f6;
+}
+
+
+.header{
+  background:#2874f0;
+  padding:12px 40px;
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+.logo{
+  color:#fff;
+  font-size:26px;
+  font-weight:bold;
+}
+.search{
+  flex:1;
+}
+.search input{
+  width:100%;
+  padding:10px 15px;
+  border:none;
+  border-radius:2px;
+  font-size:15px;
+}
+.header-links{
+  color:#fff;
+  display:flex;
+  gap:25px;
+  font-size:15px;
+}
+
+
+.categories{
+  background:#fff;
+  display:flex;
+  justify-content:space-around;
+  padding:15px 0;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+}
+.cat{
+  text-align:center;
+  font-size:14px;
+  font-weight:500;
+}
+.cat img{
+  width:64px;
+  height:64px;
+  margin-bottom:6px;
+}
+
+
+.banner{
+  margin:15px auto;
+  width:96%;
+  height:320px;
+  background:linear-gradient(120deg,#2a62ff,#57c7ff);
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  padding:40px;
+  color:#fff;
+}
+.banner img{
+  width:260px;
+  border-radius:6px;
+}
+.banner-text{
+  margin-left:40px;
+}
+.banner-text h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+.banner-text p{
+  font-size:18px;
+}
+
+
+.section{
+  background:#fff;
+  width:96%;
+  margin:20px auto;
+  padding:20px;
+}
+.section-title{
+  font-size:22px;
+  margin-bottom:15px;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:20px;
+}
+.product{
+  text-align:center;
+}
+.product img{
+  width:100%;
+  height:160px;
+  object-fit:contain;
+}
+.product h4{
+  font-size:14px;
+  margin-top:8px;
+}
+.product p{
+  font-size:13px;
+  color:#388e3c;
+  font-weight:bold;
+}
+
+
+.grid-deals{
+  width:96%;
+  margin:20px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.deal-card{
+  background:linear-gradient(135deg,#22c1c3,#fdbb2d);
+  color:#fff;
+  padding:25px;
+  border-radius:10px;
+}
+.deal-card h2{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, auto);   /* 3 rows */
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f5f6f8;
+}
+
+/* MAIN 3-COLUMN LAYOUT */
+.main-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* SECTION */
+.section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+/* HEADER */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+}
+
+.arrow {
+  width: 26px;
+  height: 26px;
+  background: #2f5bea;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* 2x2 GRID INSIDE EACH SECTION */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* PRODUCT CARD */
+.item {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.item h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* GREEN TAG TEXT */
+.tag {
+  color: #1a8f2f;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+.footer{
+  background:#172337;
+  color:#fff;
+  text-align:center;
+  padding:30px;
+  margin-top:30px;
+}
+
+@media(max-width:1000px){
+  .products{grid-template-columns:repeat(3,1fr);}  
+}
+@media(max-width:600px){
+  .products{grid-template-columns:repeat(2,1fr);}  
+  .header{flex-direction:column;gap:15px;}
+}
+</style>
+</head>
+<body>
+
+
+<div class="header">
+  <div class="logo">Flipkart</div>
+  <div class="search"><input type="text" placeholder="Search for Products, Brands and More"></div>
+  <div class="header-links">
+    <div>Login</div>
+    <div>Cart</div>
+    <div>Become a Seller</div>
+  </div>
+</div>
+
+
+<div class="categories">
+  <div class="cat"><img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/e00302d428f5c7be.png?q=100"><div>Minutes</div></div>
+  <div class="cat"><img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/5f2ee7f883cdb774.png?q=100"><div>Mobiles</div></div>
+  <div class="cat"><img src="https://rukminim2.flixcart.com/image/420/420/xif0q/jacket/v/1/g/xxl-1-yes-mamwj-905-beige-dollar-original-imahdtecvnjhwf4a.jpeg?q=60"><div>Fashion</div></div>
+  <div class="cat"><img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/e90944802d996756.jpg?q=100"><div>Electronics</div></div>
+  <div class="cat"><img src="https://rukminim2.flixcart.com/image/240/240/xif0q/mop-cleaning-wipe/t/d/o/-original-imahy4zjnhj2fcmf.jpeg?q=60"><div>Home</div></div>
+  <div class="cat"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/concealer/h/u/t/-original-imagz6cy8eggrtpc.jpeg?q=70"><div>Beauty</div></div>
+  <div class="cat"><img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/e730a834ad950bae.png?q=100"><div>Grocery</div></div>
+</div>
+
+
+<div class="banner">
+  <img src="https://rukminim2.flixcart.com/image/1080/1080/xif0q/lehenga-choli/2/f/j/free-half-sleeve-gold-win-womenfashion-original-imahegryg58syskh.jpeg?q=70&crop=false">
+  <div class="banner-text">
+    <h1>RAJPUTI POSHAK <br> ₹8,999</h1>
+    <p>Embroidered Semi Stitched Rajputi Poshak</p>
+  </div>
+</div>
+
+
+<div class="section">
+  <div class="section-title">Top Deals</div>
+  <div class="products">
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/hammock-swing/q/q/4/j852-jiomee-furniture-original-imagnf2kwyn5awrv.jpeg?q=70"><h4>Swing Chair</h4><p>From ₹16,990</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wall-decoration/v/t/d/metal-seven-running-horses-with-sunrise-wall-decor-for-living-original-imagtezqrvxuzuhz.jpeg?q=70"><h4>Wall Decor</h4><p>From ₹4,499</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/dining-set/p/n/z/200-off-white-205-0-rubber-wood-229-25-rectangle-68-102-156-45-original-imahhmfgdymehs69.jpeg?q=70"><h4>Dining Set</h4><p>From ₹2,16,599</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/monitor/z/u/x/ed343cur-j0-uwqhd-34-2024-um-ce3ss-001-acer-original-imah769gxczdsfg6.jpeg?q=70"><h4>Gaming Monitor</h4><p>From ₹1,13,399</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/gaming-chair/n/q/e/phantom-ergonomic-gaming-chair-with-premium-fabric-pu-leather-original-imagkv9ywkfbfzhk.jpeg?q=70"><h4>Gaming Chair</h4><p>From ₹42,336</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/cycle/t/d/j/scout-26t-sea-blue-black-for-ride-26-18-leader-76-2-single-speed-original-imah6j85rhhk4v6u.jpeg?q=70"><h4>Cycle</h4><p>From ₹9,999</p></div>
+  </div>
+</div>
+
+
+<div class="grid-deals">
+  <div class="deal-card"><h2>Jackets & Sweatshirts</h2><p>Min. 65% Off</p></div>
+  <div class="deal-card"><h2>Trendy Sweaters</h2><p>80% Off</p></div>
+  <div class="deal-card"><h2>Ethnic Kurta Sets</h2><p>Min. 70% Off</p></div>
+  <div class="deal-card"><h2>Gaming Setup</h2><p>Min. 35% Off</p></div>
+  <div class="deal-card"><h2>Home Decor</h2><p>40% Off</p></div>
+  <div class="deal-card"><h2>Slim Laptops</h2><p>Min. 70% Off</p></div>
+</div>
+
+
+<div class="section">
+  <div class="section-title">Furniture Deals</div>
+  <div class="products">
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/bed-mattress/b/p/q/normal-top-double-5-48-72-dual-reversible-mattress-soft-firm-original-imaheghsgv7gvm2v.jpeg?q=70"><h4>Mattresses</h4><p>From ₹22,990</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sofa-set/1/h/g/75-40-smoke-grey-chenille-3-2-1-180-60-75-80-40-150-mk00197a-75-original-imagsthyjxwgzdzd.jpeg?q=70"><h4>Sofa Sets</h4><p>From ₹97,999</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/office-study-chair/8/b/i/1-pp-polypropylene-68-0-dgc500-drogo-132-5-original-imahbvhtp5gyjwzj.jpeg?q=70"><h4>Office Chairs</h4><p>From ₹12,890</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/bed/1/q/q/king-170-grey-no-100-teak-sagun-yes-185-nkr287-alishaank-170-original-imahfye8zsjkytbn.jpeg?q=70"><h4>Beds</h4><p>From ₹2,12,790</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/dining-set/s/v/j/160-grey-173-0-mdf-150-3-rectangle-66-85-113-05-184-6-seater-220-original-imahhmfgcqkcyqgh.jpeg?q=70"><h4>TV Units</h4><p>From ₹91,249</p></div>
+    <div class="product"><img src="https://rukminim2.flixcart.com/image/612/612/xif0q/outdoor-chair/e/z/m/48-26-2-wicker-43-18-30-mariehamn-wicker-table-and-chair-set-in-original-imahdjcceuynz2n3.jpeg?q=70"><h4>Outdoor Chairs</h4><p>From ₹98,990</p></div>
+  </div>
+</div>
+
+<div class="grid">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/76b00ca7f79b8c25.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/bbd0f624384b2368.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/7b7192e5bcaad206.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/6cffa3fff32ba438.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/ab238cef85625011.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/ae9288e493e946e7.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/49ebcb61294a66b1.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/e09de41ee78bd4d0.jpg?q=60" alt="">
+  <img src="https://rukminim2.flixcart.com/fk-p-flap/1040/560/image/20b1822720e11aad.jpg?q=60" alt="">
+</div>
+
+<div class="main-grid">
+
+  <!-- Column 1 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Top Selection</h2>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="items-grid">
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/conditioner/p/y/n/-original-imagnxhyuwhdyehy.jpeg?q=60" alt="">
+        <h4>DOVE Conditioner</h4>
+        <p class="tag">Bestsellers</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/jacket/v/1/g/xxl-1-yes-mamwj-905-beige-dollar-original-imahdtecvnjhwf4a.jpeg?q=60" alt="">
+        <h4>Dollar Men's Jackets</h4>
+        <p class="tag">Popular</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/computer/f/j/g/-original-imahfthtkkzyazkf.jpeg?q=60" alt="">
+        <h4>Apple Laptops</h4>
+        <p class="tag">Most-loved</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/kdkkdjk0/shuttle/u/r/3/mavis-350-green-cap-6-75-nylon-yonex-slow-original-imafug3vnxye6skh.jpeg?q=60" alt="">
+        <h4>Shuttles</h4>
+        <p class="tag">Explore Now</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Best quality</h2>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="items-grid">
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/ksgehzk0/pen/z/s/c/m03-parent-baoke-original-imag6ypfn5w2fvbg.jpeg?q=70" alt="">
+        <h4>PILOT Pens</h4>
+        <p class="tag">Bestsellers</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/q/n/y/10-rsl061-red-tape-brown-original-imah27r6guvmhxja.jpeg?q=70" alt="">
+        <h4>REDTAPE Shoes</h4>
+        <p class="tag">Widest Range</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/sling-bag/p/o/j/sling-bag-for-men-anti-theft-crossbody-bag-usb-pu-shoulder-bag-1-original-imahh4j3n4nrht2y.jpeg?q=60" alt="">
+        <h4>Bags & Backpacks</h4>
+        <p class="tag">Popular</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-lehenga-choli/f/e/n/free-full-sleeve-semi-stitched-34-rs-harmoni-rs-lehenga-choli-original-imahyag45rzfdzgh.jpeg?q=70" alt="">
+        <h4>Women's Lehenga</h4>
+        <p class="tag">Grab Or Gone</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Column 3 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Top Rated</h2>
+      <span class="arrow">›</span>
+    </div>
+
+    <div class="items-grid">
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/projector/b/e/e/hy320-mini-4k-support-native-hd-android-11-wifi-6-bt-5-0-original-imahgdncgs8fkbzg.jpeg?q=60" alt="">
+        <h4>Projectors</h4>
+        <p class="tag">In Focus Now</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/420/420/xif0q/gaming-chair/f/p/m/1usa-premium-gaming-chair-gt-player-original-imahcj2tq52hdbes.jpeg?q=60" alt="">
+        <h4>Gaming Chairs</h4>
+        <p class="tag">Grab Now</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/hammock-swing/i/t/5/30-5-903657-humzu-krt-original-imahgs395snywwep.jpeg?q=70" alt="">
+        <h4>Iron Hammock Swings</h4>
+        <p class="tag">Best Picks</p>
+      </div>
+
+      <div class="item">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/office-study-chair/f/v/9/1-iron-21-12-bt-nice-furniture-44-48-original-imahbu63ggk7gmev.jpeg?q=70" alt="">
+        <h4>Office Study Chairs</h4>
+        <p class="tag">Trending</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="footer">
+  © 2025 Flipkart Clone | Created By Anmol Rajpoot
+
+  <br>
+  <br>
+
+  <h6>Top Stories: Brand Directory <br> MOST SEARCHED FOR ON FLIPKART : Elecctronics, Fashion, Home & Kitchen, Daily Essentials, Hobbies & Lifestyle, Gaming, Sports.  </h6>
+
+</body>
+</html>
